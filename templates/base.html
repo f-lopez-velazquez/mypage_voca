@@ -12,7 +12,7 @@
         <nav>
             <a href="{{ url_for('index') }}">Inicio</a>
             {% if current_user.is_authenticated %}
-                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('dashboard') }}">Panel</a>
                 <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
             {% else %}
                 <a href="{{ url_for('login') }}">Iniciar Sesión</a>

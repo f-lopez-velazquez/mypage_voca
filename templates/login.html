@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Iniciar Sesión</h2>
+<form method="POST" action="{{ url_for('login') }}">
+    <label>Usuario:</label>
+    <input type="text" name="username" required>
+    <label>Contraseña:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Entrar</button>
+</form>
+{% endblock %}

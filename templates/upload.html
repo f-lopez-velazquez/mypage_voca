@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Subir Tarea</h2>
+<form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+    <label>Título:</label>
+    <input type="text" name="title" required>
+    <label>Descripción:</label>
+    <textarea name="description" required></textarea>
+    <label>Archivo:</label>
+    <input type="file" name="file" required>
+    <button type="submit">Subir</button>
+</form>
+{% endblock %}

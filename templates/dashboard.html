@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bienvenido, {{ user.username }}</h2>
+<h3>Tareas</h3>
+<ul>
+    {% for submission in submissions %}
+        <li>{{ submission.title }} - <a href="{{ url_for('static', filename='uploads/' + submission.filename) }}">Descargar</a></li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('upload') }}">Subir tarea</a>
+{% endblock %}
